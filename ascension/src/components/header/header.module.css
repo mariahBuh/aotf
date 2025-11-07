@@ -1,0 +1,9 @@
+.headerLink {
+  font-family: Mantina;
+  font-size: 36px;
+  color: #621D5B;
+}
+
+.headerLink:hover {
+  color: #ffffff;
+}
