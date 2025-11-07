@@ -1,0 +1,7 @@
+@font-face {
+    font-family: 'Mantinia';
+    src: url('/assets/fonts/Mantinia.woff2') format('woff2'),
+         url('/assets/fonts/Mantinia.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}

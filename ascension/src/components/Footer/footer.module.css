@@ -1,0 +1,120 @@
+.footer {
+  background: linear-gradient(to top, #2b0e13, #1a0a0c);
+  color: #ddd;
+  padding: 60px 20px 40px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  font-family: "Mantinia", sans-serif;
+}
+
+.footerContainer {
+  max-width: fit-content;
+  margin: 0 auto;
+}
+
+.footerTop {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+}
+
+.footerLeft {
+  text-align: center;
+}
+
+.footerLogo {
+  margin: 20px;
+  width: 320px;
+  height:auto;
+  
+}
+
+.logoSmall {
+  display: block;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.logoLarge {
+  display: block;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.footerQuote {
+  font-size: 0.85rem;
+  font-style: italic;
+  color: #b3a6a8;
+  margin-top: 10px;
+}
+
+.footerLinks {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  text-align: center;
+}
+
+.footerColumn h3 {
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+}
+
+.footerColumn ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footerColumn li {
+  margin-bottom: 6px;
+}
+
+.footerColumn a {
+  text-decoration: none;
+  color: #bbb;
+  transition: color 0.2s;
+}
+
+.footerColumn a:hover {
+  color: #fff;
+}
+
+.footerBottom {
+  text-align: center;
+  font-size: 0.75rem;
+  color: #888;
+  line-height: 1.5;
+}
+
+.footerLegal {
+  margin-top: 10px;
+  font-size: 0.7rem;
+  color: #666;
+}
+
+@media (min-width: 768px) {
+  .footerTop {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .footerLeft {
+    text-align: left;
+    width: 35%;
+  }
+
+  .footerLinks {
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 60px;
+    text-align: left;
+    width: 60%;
+  }
+}
