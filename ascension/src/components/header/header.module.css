@@ -7,3 +7,19 @@
 .headerLink:hover {
   color: #ffffff;
 }
+
+.gapMarker{
+    width: 101px;
+    height: 36px;
+}
+
+.gameLogo{
+    width: 260px;
+    height: 167px;
+}
+
+.backGround{
+    background-color: linear-gradient(to bottom, #000000, rgba(0, 0, 0, 0));;
+    height: 515px;
+    width: 1920px;
+}
