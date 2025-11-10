@@ -1,6 +1,6 @@
 .headerLink {
   font-family: 'Mantinia', serif;
-  font-size: 36px;
+  font-size: 20px;
   color: #621D5B;
 }
 
@@ -9,29 +9,36 @@
 }
 
 .gapMarker{
-    width: 101px;
-    height: 36px;
-    padding-left: 14px;
-    padding-right: 14px;
+    width: 73.59px;
+    height: 26.23px;
 }
 
 .gameLogo{
-    width: 260px;
-    height: 167px;
+    width: 205px;
+    height: 122px;
 }
 
 .backGround{
     background-color: linear-gradient(to bottom, #000000, rgba(0, 0, 0, 0));;
     height: 515px;
-    width: 1920px;
 }
 
-ul {
-  list-style-type: none;
-  margin: 0;
+nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  gap: 18px; /* adjust spacing */
   padding: 0;
+  margin: 0;
 }
 
-ul li {
+nav ul li {
   float: left;
+}
+
+nav{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
