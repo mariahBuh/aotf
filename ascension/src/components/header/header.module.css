@@ -11,6 +11,8 @@
 .gapMarker{
     width: 101px;
     height: 36px;
+    padding-left: 14px;
+    padding-right: 14px;
 }
 
 .gameLogo{
