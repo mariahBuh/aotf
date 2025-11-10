@@ -2,11 +2,10 @@ import React from "react";
 import styles from "./footer.module.css";
 import GameLogo from "../../assets/GameLogo.png";
 
-
 const Footer: React.FC = () => {
   return (
     <footer className={styles.footer}>
-
+      <div className={styles.background}></div>
       <div className={styles.footerContainer}>
         <div className={styles.footerTop}>
           <div className={styles.footerLeft}>
@@ -18,7 +17,7 @@ const Footer: React.FC = () => {
               />
             </h2>
             <p className={styles.footerQuote}>
-              IN THE LIGHT WE FIND WHAT THE DARKNESS TRIED TO HIDE
+              IN THE LIGHT WE FIND WHAT THE DARKNESS TRIES TO HIDE
             </p>
           </div>
 
@@ -83,7 +82,7 @@ const Footer: React.FC = () => {
         </div>
 
         <div className={styles.footerBottom}>
-          <p>© 2025 MEOW MEOW STUDIOS</p>
+          <p className={styles.copyright}>© 2025 MEOW MEOW STUDIOS</p>
           <p className={styles.footerLegal}>
             ALL CONTENT, GAME TITLES, TRADE NAMES AND/OR TRADE DRESS,
             TRADEMARKS, ARTWORK, AND ASSOCIATED IMAGERY ARE TRADEMARKS AND/OR
