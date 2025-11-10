@@ -1,15 +1,21 @@
 import React from "react";
-import styles from  "./footer.module.css";
+import styles from "./footer.module.css";
 import GameLogo from "../../assets/GameLogo.png";
+
 
 const Footer: React.FC = () => {
   return (
     <footer className={styles.footer}>
+
       <div className={styles.footerContainer}>
         <div className={styles.footerTop}>
           <div className={styles.footerLeft}>
             <h2 className={styles.footerLogo}>
-                <img src={GameLogo} alt="Meow Meow Studios Logo" className={styles.footerLogo} />
+              <img
+                src={GameLogo}
+                alt="Meow Meow Studios Logo"
+                className={styles.footerLogo}
+              />
             </h2>
             <p className={styles.footerQuote}>
               IN THE LIGHT WE FIND WHAT THE DARKNESS TRIED TO HIDE
