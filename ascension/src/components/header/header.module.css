@@ -19,8 +19,8 @@
 }
 
 .backGround{
-    background-color: linear-gradient(to bottom, #000000, rgba(0, 0, 0, 0));;
-    height: 515px;
+    background-image: linear-gradient(to bottom, #000000 25%, rgba(0, 0, 0, 0) 100%);
+    height: 400px;
 }
 
 nav ul {
@@ -29,7 +29,7 @@ nav ul {
   justify-content: center;
   list-style: none;
   gap: 18px; /* adjust spacing */
-  padding: 0;
+  padding: 50px 0 0 0;
   margin: 0;
 }
 
