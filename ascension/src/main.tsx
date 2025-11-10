@@ -3,6 +3,7 @@ import { createRoot } from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import App from "./App";
 import About from "./components/About/about";
+import GamePlay from "./components/GamePlay/gameplay";
 import "./index.css";
 
 createRoot(document.getElementById("root")!).render(
@@ -14,6 +15,9 @@ createRoot(document.getElementById("root")!).render(
 
         {/* About page */}
         <Route path="/about" element={<About />} />
+
+         {/* GamePlay page */}
+        <Route path="/gameplay" element={<GamePlay />} />
       </Routes>
     </BrowserRouter>
   </StrictMode>
