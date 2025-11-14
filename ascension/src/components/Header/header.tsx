@@ -1,7 +1,7 @@
 import React from "react";
 import styles from './header.module.css';
 import GapMarkers from '../../assets/GapMarkers.png';
-import GameLogo from '../../assets/GameLogo.png';
+import GameLogo from '../../assets/GameLogo2.png';
 
 const Header: React.FC = () => {
     return (
