@@ -1,0 +1,49 @@
+.headerLink {
+  font-family: 'Mantinia', serif;
+  font-size: 20px;
+  color: #621D5B;
+}
+
+.headerLink:hover {
+  color: #ffffff;
+}
+
+.gapMarker{
+    width: 73.59px;
+    height: 26.23px;
+}
+
+.gameLogo{
+    width: 205px;
+    height: 122px;
+}
+
+.backGround{
+    background-image: linear-gradient(to bottom, #000000 25%, rgba(0, 0, 0, 0) 100%);
+    height: 400px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden; 
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  gap: 18px; /* adjust spacing */
+  padding: 50px 0 0 0;
+  margin: 0;
+}
+
+nav ul li {
+  float: left;
+}
+
+nav{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
