@@ -17,7 +17,7 @@ const Header: React.FC = () => {
                     <li><img src={GameLogo} alt="game logo" className={styles.gameLogo}/></li>
                     <li><img src={GapMarkers}  alt="gap marker" className={styles.gapMarker}/></li>
                     
-                    <li><a className={styles.headerLink}>THE TEAM </a></li>
+                    <li><a className={styles.headerLink}>THE TEAM</a></li>
                     <li><img src={GapMarkers}  alt="gap marker" className={styles.gapMarker}/></li>
                     <li><a className={styles.headerLink}>PRE ORDER</a></li>
                 </ul>
