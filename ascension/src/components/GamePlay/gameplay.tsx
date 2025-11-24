@@ -7,7 +7,6 @@ import img6 from "../../assets/img6.jpg";
 import img7 from "../../assets/img7.jpg";
 import img8 from "../../assets/img8.jpg";
 
-
 import TitleLine from "../../assets/TitleLine.png";
 import GameplayTitle from "../../assets/Gameplay.png";
 
@@ -50,9 +49,11 @@ export default function Gameplay() {
           </p>
 
           <ul>
-            <li>WASD — MOVE THE PLAYER</li>
-            <li>MOUSE — LOOK AROUND</li>
-            <li>TOUCH GLOWING OBJECTS — TRIGGER MEMORIES AND PROGRESS THE STORY</li>
+            WASD — MOVE THE PLAYER
+            <br></br>
+            MOUSE — LOOK AROUND
+            <br></br>
+            TOUCH GLOWING OBJECTS — TRIGGER MEMORIES AND PROGRESS THE STORY
           </ul>
 
           <p>

@@ -1,49 +1,187 @@
 .headerLink {
-  font-family: 'Mantinia', serif;
+  font-family: "Mantinia", serif;
   font-size: 20px;
-  color: #621D5B;
+  color: #621d5b;
+  cursor: pointer;
+  transition: color 0.3s;
+  text-decoration: none;
 }
 
 .headerLink:hover {
   color: #ffffff;
 }
 
-.gapMarker{
-    width: 73.59px;
-    height: 26.23px;
+.gapMarker {
+  width: 73.59px;
+  height: 26.23px;
 }
 
-.gameLogo{
-    width: 205px;
-    height: 122px;
+.gameLogo {
+  width: 205px;
+  height: 122px;
 }
 
-.backGround{
-    background-image: linear-gradient(to bottom, #000000 25%, rgba(0, 0, 0, 0) 100%);
-    height: 400px;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    overflow: hidden; 
+/* Background gradient behind header */
+.backGround {
+  background-image: linear-gradient(to bottom, #000000 25%, rgba(0, 0, 0, 0) 100%);
+  height: 400px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: 20;
+  pointer-events: none;
 }
 
-nav ul {
+/* Allow interaction for nav + menu */
+.nav,
+.nav *,
+.menu,
+.menu * {
+  pointer-events: auto;
+}
+
+/* Top bar: logo + burger */
+.nav {
   display: flex;
   align-items: center;
-  justify-content: center;
-  list-style: none;
-  gap: 18px; /* adjust spacing */
-  padding: 50px 0 0 0;
-  margin: 0;
+  justify-content: space-between;
+  padding: 10px 20px;
+  position: relative;
+  z-index: 40;
 }
 
-nav ul li {
-  float: left;
-}
-
-nav{
-  display: flex;
+/* Burger button */
+.burger {
+  display: inline-flex;
   align-items: center;
   justify-content: center;
+  width: 44px;
+  height: 44px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+}
+
+/* Burger lines */
+.bar {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: #621d5b;
+  margin: 4px 0;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+/* Burger -> X */
+.burgerOpen .bar:nth-child(1) {
+  transform: translateY(6px) rotate(45deg);
+}
+
+.burgerOpen .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.burgerOpen .bar:nth-child(3) {
+  transform: translateY(-6px) rotate(-45deg);
+}
+
+/* Fullscreen overlay menu */
+.menu {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.95);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.25s ease, visibility 0.25s ease;
+  z-index: 30;
+}
+
+.menuOpen {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+/* Make links readable on dark overlay */
+.menuOpen .headerLink {
+  color: #ffffff;
+  font-size: 22px;
+}
+
+/* Make markers a bit smaller in overlay if needed */
+.menuOpen .gapMarker {
+  width: 60px;
+  height: auto;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .headerLink {
+    font-size: 18px;
+  }
+
+  .gapMarker {
+    width: 50px;
+    height: 18px;
+  }
+
+  .gameLogo {
+    width: 160px;
+    height: 95px;
+  }
+
+  .backGround {
+    height: 300px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .headerLink {
+    font-size: 16px;
+  }
+
+  .gapMarker {
+    width: 40px;
+    height: 14px;
+  }
+
+  .gameLogo {
+    width: 120px;
+    height: 72px;
+  }
+
+  .backGround {
+    height: 250px;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .headerLink {
+    font-size: 14px;
+  }
+
+  .gapMarker {
+    width: 30px;
+    height: 10px;
+  }
+
+  .gameLogo {
+    width: 90px;
+    height: 54px;
+  }
+
+  .backGround {
+    height: 200px;
+  }
 }

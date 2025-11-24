@@ -1,0 +1,317 @@
+/* team.module.css */
+
+@font-face {
+  font-family: "Mantinia";
+  src: url("../../assets/fonts/Mantinia.otf") format("opentype");
+}
+
+.teamContainer {
+  width: 100%;
+  padding: 60px;
+  color: #e0e0e0;
+  font-family: "Mantinia", serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.titleWrapper {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.titleImage {
+  width: 270px;
+  margin-bottom: 5px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.titleLine {
+  width: 500px;
+  max-width: 90%;
+  display: block;
+  margin: 0 auto;
+}
+
+.carouselWrapper {
+  max-width: 1300px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  position: relative; /* added so absolute arrows are positioned relative to wrapper */
+}
+
+.arrowButton {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  flex-shrink: 0;
+  position: static; /* default for larger screens */
+}
+
+.left {
+  /* marker for left arrow (styles applied in media queries) */
+}
+
+.right {
+  /* marker for right arrow (styles applied in media queries) */
+}
+
+.arrowButton img {
+  width: 72px;
+  height: auto;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+  max-width: 1150px;
+}
+
+.avatarWrapper {
+  flex-shrink: 0;
+}
+
+.avatar {
+  width: 360px;
+  height: auto;
+}
+
+.textWrapper {
+  max-width: 600px;
+  padding-right: 40px;
+  text-align: left;
+}
+
+.name {
+  font-size: 40px;
+  letter-spacing: 0.18em;
+  margin: 0 0 16px;
+  text-transform: uppercase;
+}
+
+.role {
+  font-size: 12px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  margin: 0 0 18px;
+}
+
+.description {
+  font-size: 12px;
+  line-height: 1.7;
+  text-transform: uppercase;
+}
+
+/* Tablet Large */
+@media (max-width: 1200px) {
+  .carouselWrapper {
+    gap: 30px;
+  }
+
+  .card {
+    gap: 50px;
+  }
+
+  .avatar {
+    width: 300px;
+  }
+
+  .textWrapper {
+    max-width: 500px;
+    padding-right: 20px;
+  }
+
+  .name {
+    font-size: 32px;
+  }
+
+  .arrowButton img {
+    width: 60px;
+  }
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .teamContainer {
+    padding: 40px 20px;
+  }
+
+  .titleImage {
+    width: 220px;
+  }
+
+  .titleLine {
+    width: 400px;
+  }
+
+  .carouselWrapper {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  /* position arrows on sides instead of above/below */
+  .arrowButton {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+  }
+
+  .left {
+    left: 12px;
+  }
+
+  .right {
+    right: 12px;
+  }
+
+  .card {
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+  }
+
+  .avatar {
+    width: 280px;
+  }
+
+  .textWrapper {
+    max-width: 600px;
+    padding-right: 0;
+    text-align: center;
+  }
+
+  .name {
+    font-size: 30px;
+  }
+
+  .role {
+    font-size: 11px;
+  }
+
+  .description {
+    font-size: 11px;
+  }
+
+  .arrowButton img {
+    width: 50px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .teamContainer {
+    padding: 30px 15px;
+  }
+
+  .titleImage {
+    width: 180px;
+  }
+
+  .titleLine {
+    width: 320px;
+  }
+
+  .titleWrapper {
+    margin-bottom: 30px;
+  }
+
+  .avatar {
+    width: 240px;
+  }
+
+  .textWrapper {
+    max-width: 90%;
+  }
+
+  .name {
+    font-size: 24px;
+    letter-spacing: 0.12em;
+    margin: 0 0 12px;
+  }
+
+  .role {
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    margin: 0 0 14px;
+  }
+
+  .description {
+    font-size: 10px;
+    line-height: 1.6;
+  }
+
+  .arrowButton img {
+    width: 40px;
+  }
+
+  .card {
+    gap: 20px;
+  }
+
+  .carouselWrapper {
+    gap: 20px;
+  }
+
+  /* tighten arrow offsets on smaller screens */
+  .left {
+    left: 8px;
+  }
+
+  .right {
+    right: 8px;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .teamContainer {
+    padding: 20px 10px;
+  }
+
+  .titleImage {
+    width: 150px;
+  }
+
+  .titleLine {
+    width: 260px;
+  }
+
+  .avatar {
+    width: 200px;
+  }
+
+  .name {
+    font-size: 20px;
+    letter-spacing: 0.1em;
+  }
+
+  .role {
+    font-size: 9px;
+    letter-spacing: 0.15em;
+  }
+
+  .description {
+    font-size: 9px;
+    line-height: 1.5;
+  }
+
+  .arrowButton img {
+    width: 35px;
+  }
+
+  .left {
+    left: 6px;
+  }
+
+  .right {
+    right: 6px;
+  }
+}

@@ -1,0 +1,137 @@
+@font-face {
+  font-family: "Mantinia";
+  src: url("../../assets/fonts/Mantinia.otf") format("opentype");
+}
+
+.heroContainer {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background: #000;
+}
+
+.videoWrapper {
+  position: relative;
+}
+
+.heroVideo {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.gradientOverlay {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 270px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.5) 20%,
+    rgba(0, 0, 0, 1) 90%
+  );
+  pointer-events: none;
+  z-index: 1;
+}
+
+.heroContent {
+  pointer-events: auto;
+  text-align: center;
+  color: #e0e0e0;
+  font-family: "Mantinia", serif;
+  padding-bottom: 10px;
+  position: relative;
+  z-index: 2;
+}
+
+.heroText {
+  font-size: 22px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  margin: 0 0 10px;
+}
+
+.preorderButton {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.preorderButton img {
+  display: block;
+  height: 40px;
+  width: auto;
+}
+
+.gradientBottom {
+  height: 100px;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0.4) 40%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .gradientOverlay {
+    height: 220px;
+  }
+
+  .heroText {
+    font-size: 18px;
+    letter-spacing: 0.2em;
+  }
+
+  .preorderButton img {
+    height: 35px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .gradientOverlay {
+    height: 180px;
+  }
+
+  .heroText {
+    font-size: 14px;
+    letter-spacing: 0.15em;
+    padding: 0 20px;
+  }
+
+  .preorderButton img {
+    height: 30px;
+  }
+
+  .gradientBottom {
+    height: 60px;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .gradientOverlay {
+    height: 150px;
+  }
+
+  .heroText {
+    font-size: 11px;
+    letter-spacing: 0.1em;
+  }
+
+  .preorderButton img {
+    height: 25px;
+  }
+
+  .heroContent {
+    padding-bottom: 5px;
+  }
+}

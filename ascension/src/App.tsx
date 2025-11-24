@@ -5,14 +5,19 @@ import GamePlay from './components/GamePlay/gameplay';
 import './App.css'
 import './styles/fonts.css';
 import Header from './components/Header/header';
+import Team from './components/Team/team';
+import Hero from './components/Hero/hero';
+
 
 function App() {
 
   return (
     <div className="App">
       <Header />
+      <Hero />
       <About />
       <GamePlay />
+      <Team />
       <Footer />
     </div>
 

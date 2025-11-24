@@ -25,57 +25,57 @@ const Footer: React.FC = () => {
             <div className={styles.footerColumn}>
               <h3>ABOUT</h3>
               <ul>
-                <li>
+                <br></br>
                   <a href="#">Meow Meow Studios</a>
-                </li>
-                <li>
+                
+                <br></br>
                   <a href="#">Roles</a>
-                </li>
-                <li>
+                
+                <br></br>
                   <a href="#">Productions</a>
-                </li>
-                <li>
+                
+                <br></br>
                   <a href="#">History</a>
-                </li>
+                
               </ul>
             </div>
 
             <div className={styles.footerColumn}>
               <h3>TOOLS</h3>
               <ul>
-                <li>
+                <br></br>
                   <a href="#">Unreal Engine</a>
-                </li>
-                <li>
+                
+                <br></br>
                   <a href="#">Figma</a>
-                </li>
-                <li>
+                
+                <br></br>
                   <a href="#">Blender</a>
-                </li>
-                <li>
+                
+                <br></br>
                   <a href="#">Ableton</a>
-                </li>
-                <li>
+                
+                <br></br>
                   <a href="#">Mocap</a>
-                </li>
+                
               </ul>
             </div>
 
             <div className={styles.footerColumn}>
               <h3>RESOURCES</h3>
               <ul>
-                <li>
+                <br></br>
                   <a href="#">Terms of Use</a>
-                </li>
-                <li>
+                
+                <br></br>
                   <a href="#">Cookie Policy</a>
-                </li>
-                <li>
+                
+                <br></br>
                   <a href="#">Privacy Policy</a>
-                </li>
-                <li>
+                
+                <br></br>
                   <a href="#">Support</a>
-                </li>
+                
               </ul>
             </div>
           </div>
