@@ -1,16 +1,63 @@
-html, body, #root {
-  margin: 0 auto;
-  text-align: center;
-  width: 100%;
-  gap: 50px;
-}
-
+/* =====================================================
+   Global reset
+   Removes default margins/paddings and normalizes box sizing
+===================================================== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* =====================================================
+   HTML & Body base setup
+===================================================== */
+html,
+body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  text-align: center;
+  overflow-x: hidden;                 /* Prevent horizontal scroll on mobile */
+  -webkit-text-size-adjust: 100%;     /* Avoid font auto-zoom on iOS */
+  text-size-adjust: 100%;             /* Standard property for modern browsers */
+}
+
+/* =====================================================
+   React root container
+===================================================== */
+#root {
+  width: 100%;
+  min-height: 100dvh;                 /* Dynamic viewport height (mobile-safe) */
+}
+
+/* =====================================================
+   App main layout
+===================================================== */
+.App {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100dvh;                 /* Better than 100vh on mobile browsers */
+  gap: 30px;                          /* Vertical spacing between sections */
+  overflow-x: hidden;
+}
+
+/* =====================================================
+   Hero section
+   Must be a direct or indirect child of .App
+===================================================== */
+.hero,
+.hero__wrap {
+  flex: 1 1 auto;                     /* Fill remaining vertical space */
+  min-height: 0;                      /* Prevent flexbox overflow issues */
+}
+
+/* =====================================================
+   Header / logo (Vite default styles)
+===================================================== */
 .logo {
   height: 6em;
   padding: 1.5em;
@@ -26,14 +73,9 @@ html, body, #root {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
-.App {
-  display: flex;
-  flex-direction: column;
-  gap: 30px; /* reduce from 50 if you want less space */
-  overflow-x: hidden;
-  width: 100%;
-}
-
+/* =====================================================
+   Logo animation
+===================================================== */
 @keyframes logo-spin {
   from {
     transform: rotate(0deg);
@@ -43,12 +85,16 @@ html, body, #root {
   }
 }
 
+/* Run animation only if reduced motion is NOT requested */
 @media (prefers-reduced-motion: no-preference) {
   a:nth-of-type(2) .logo {
     animation: logo-spin infinite 20s linear;
   }
 }
 
+/* =====================================================
+   Generic components
+===================================================== */
 .card {
   padding: 2em;
 }
@@ -57,26 +103,31 @@ html, body, #root {
   color: #888;
 }
 
-/* Tablet */
+/* =====================================================
+   Tablet styles
+===================================================== */
 @media (max-width: 1024px) {
+  .App {
+    gap: 40px;
+  }
+
   .logo {
     height: 5em;
     padding: 1.2em;
   }
 
-  .App {
-    gap: 40px;
+  .card {
+    padding: 1.75em;
   }
 }
 
-/* Mobile */
+/* =====================================================
+   Mobile styles
+===================================================== */
 @media (max-width: 768px) {
-  html, body, #root {
-    gap: 30px;
-  }
-
   .App {
     gap: 30px;
+    min-height: 100dvh;
   }
 
   .logo {
@@ -89,12 +140,10 @@ html, body, #root {
   }
 }
 
-/* Small Mobile */
+/* =====================================================
+   Small mobile styles
+===================================================== */
 @media (max-width: 480px) {
-  html, body, #root {
-    gap: 20px;
-  }
-
   .App {
     gap: 20px;
   }

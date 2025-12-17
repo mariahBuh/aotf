@@ -1,7 +1,7 @@
 /* === FONT IMPORT === */
 @font-face {
-  font-family: 'Mantinia';
-  src: url('../../assets/fonts/Mantinia.otf') format('opentype');
+  font-family: "Mantinia";
+  src: url("../../assets/fonts/Mantinia.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
@@ -11,106 +11,99 @@
   width: 100%;
   max-width: 1400px;
   margin: 0 auto;
-  overflow-x: hidden;
-  border: none;
   padding: 60px 20px;
+  color: #e0e0e0;
+  font-family: "Mantinia", serif;
+  overflow-x: hidden;
+}
+
+/* === TITLE === */
+.titleWrapper {
+  text-align: center;
+  margin-bottom: 40px;
 }
 
 .aboutTitle {
-  width: 200px; 
+  width: 200px;
   margin-bottom: 5px;
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
 
-/* === TITLE SECTION === */
-.titleWrapper {
-  text-align: center;
-  margin-bottom: 3rem;
-}
-
-.heading {
-  font-family: 'Mantinia', serif;
-  font-size: 5rem;
-  color: #dcdcdc;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  margin-bottom: 1rem;
-}
-
 .titleLine {
   width: 550px;
   max-width: 90%;
-  height: auto;
   display: block;
   margin: 0 auto;
 }
 
-/* === CONTENT === */
+/* === CONTENT LAYOUT === */
 .content {
   display: flex;
-  justify-content: center;
   align-items: flex-start;
-  gap: 2rem;
-  max-width: 100%;
-  width: fit-content;
+  justify-content: center;
+  gap: 40px;
+  width: 100%;
+  max-width: 1300px;
   margin: 0 auto;
-  overflow-x: hidden;
+}
+
+/* === TEXT SECTION (FORCED LEFT ALIGN) === */
+.textSection {
+  flex: 1 1 auto;
+  max-width: 500px;
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 1.8;
+  text-align: left;
+}
+
+
+.textSection p {
+  text-align: left;
+  margin: 0;
+}
+
+.textSection p + p {
+  margin-top: 1.5rem;
 }
 
 /* === CAROUSEL === */
 .carousel {
-  flex: none;
   width: 697px;
   height: 392px;
   overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: transparent;
-  border: none;
-  box-shadow: none;
+  flex-shrink: 0;
 }
 
 .track {
   display: flex;
-  width: max-content;
+  width: 100%;
+  height: 100%;
+  transition: transform 1s ease-in-out;
 }
 
 .image {
-  width: 697px;
-  height: 392px;
+  width: 100%;
+  height: 100%;
+  flex: 0 0 100%;
   object-fit: cover;
-  flex-shrink: 0;
   display: block;
 }
 
-/* === TEXT === */
-.textSection {
-  font-family: "Mantinia", serif;
- flex: 1 1 914px;
-
- flex: 1 1 0;
-  max-width: 914px;
-  height: auto;
-  text-transform: uppercase;
-  font-size: 0.9rem;
-  line-height: 1.8;
-  letter-spacing: 1px;
-  color: #ffffff;
-  text-align: left;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  word-break: break-word;
-}
-
-/* === RESPONSIVE === */
-@media (max-width: 1400px) {
+/* === TABLET === */
+@media (max-width: 1300px) {
   .content {
     flex-direction: column;
     align-items: center;
+    gap: 30px;
+  }
+
+  .textSection {
+    width: 90%;
+    max-width: 600px;
+    text-align: left;
   }
 
   .carousel {
@@ -119,19 +112,9 @@
     height: auto;
     aspect-ratio: 697 / 392;
   }
-
-  .image {
-    width: 100%;
-    height: 100%;
-  }
-
-  .textSection {
-    width: 90%;
-    max-width: 800px;
-    text-align: center;
-  }
 }
 
+/* === SMALL DESKTOP / TABLET === */
 @media (max-width: 1024px) {
   .aboutContainer {
     padding: 40px 20px;
@@ -146,11 +129,11 @@
   }
 
   .textSection {
-    font-size: 0.85rem;
+    font-size: 15px;
   }
 }
 
-/* Mobile */
+/* === MOBILE === */
 @media (max-width: 768px) {
   .aboutContainer {
     padding: 30px 15px;
@@ -164,26 +147,19 @@
     width: 350px;
   }
 
-  .titleWrapper {
-    margin-bottom: 2rem;
+  .textSection {
+    font-size: 13px;
+    line-height: 1.6;
+    width: 95%;
+    text-align: left;
   }
 
   .carousel {
     width: 95%;
   }
-
-  .textSection {
-    width: 95%;
-    font-size: 0.75rem;
-    line-height: 1.6;
-  }
-
-  .content {
-    gap: 1.5rem;
-  }
 }
 
-/* Small Mobile */
+/* === SMALL MOBILE === */
 @media (max-width: 480px) {
   .aboutContainer {
     padding: 20px 10px;
@@ -198,12 +174,9 @@
   }
 
   .textSection {
-    font-size: 0.7rem;
+    font-size: 11px;
     line-height: 1.5;
     letter-spacing: 0.5px;
-  }
-
-  .content {
-    gap: 1rem;
+    text-align: left;
   }
 }

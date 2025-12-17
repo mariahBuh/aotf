@@ -67,7 +67,7 @@ export default function Gameplay() {
           <div
             className={styles.track}
             style={{
-              transform: `translateX(-${index * 697}px)`,
+              transform: `translateX(-${index * 100}%)`,
               transition: "transform 1s ease-in-out",
             }}
           >
